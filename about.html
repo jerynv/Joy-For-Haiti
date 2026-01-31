@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>About - Joy for Haiti</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-circle"></div>
+                <div class="logo-text">
+                    <h1>JOY FOR HAITI</h1>
+                    <div class="logo-tagline">LIVE IN JOY</div>
+                </div>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li><a href="about.html" onclick="closeMenu()">About</a></li>
+                <li><a href="blog.html" onclick="closeMenu()">Blog</a></li>
+                <li><a href="support.html" onclick="closeMenu()">Support</a></li>
+                <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" style="margin-top: 100px;">
+        <h2>Our Mission</h2>
+        <div class="mission-vision-grid">
+            <div class="mission-vision-card">
+                <div class="mission-vision-image"></div>
+                <div class="mission-vision-content">
+                    <h3>Our Mission</h3>
+                    <p>Joy for Haiti exists to provide a Christ centered home, primarily for those still completing high school. Most of this population are teen orphans dismissed prematurely. This family community will provide all essential needs to develop each unique individual's spiritual, physical, and emotional needs.</p>
+                </div>
+            </div>
+            <div class="mission-vision-card">
+                <div class="mission-vision-image"></div>
+                <div class="mission-vision-content">
+                    <h3>Our Vision</h3>
+                    <p>Buy a large piece of land and start with 3 small dorms. One for staff, one for boys, and one for girls. As God blesses and provides, growing Joy for Haiti into a campus setting with a church, school, medical clinic, and restaurant. This vision would enable our graduates to fulfill their dreams with a successful future and break the cycle of poverty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Our Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">✝</div>
+                <h3>CHRIST<br>CENTERED</h3>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">❤</div>
+                <h3>JOY<br>FILLED</h3>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">💭</div>
+                <h3>DREAM<br>FULFILLING</h3>
+            </div>
+        </div>
+    </section>
+
+    <div class="story-section">
+        <div class="story-content">
+            <div class="story-text">
+                <h2 style="text-align: left; margin-bottom: 2rem;">Our Story</h2>
+                <p><strong>My name is Kodi Vicari</strong>, and I am a wife to my husband Andy, mother of 4 kiddos and 3 dogs, and I love serving and taking care of others and giving God ALL the glory!</p>
+                <p>As you can see, we are a diverse family. Dawson (17) and Braylee (15) are our biological children and Jeryn (13) and LeNia (12) are adopted from Haiti. Andy and I were called with a clear plan from God 12-ish years ago to adopt his 2 children.</p>
+                <p>Never realizing that we would ever adopt, we didn't have a single resource planned. God not only worked out each and every detail. While in Haiti so many years ago and each time I have traveled since, God has whispered to me that we would be forever connected to this poor yet beautiful country.</p>
+                <p>Now I'm not a patient person and God would be the first to know this. So impatiently and prayerfully waiting he finally revealed HIS plan. There is a grave need for a transition home especially for the teen population which I have come to realize is the "forgotten" population.</p>
+                <p>You see, these teens have been dismissed prematurely from orphanages and there is no one willing or able to care for them and they still need to complete high school. Is it ironic that 3 out of 4 of my children are teens right now. I think not. What I do think is that I could never imagine Dawson, Braylee, or Jeryn on the streets in a very dangerous country trying to survive with no one and only having dreams of finishing high school.</p>
+                <p>That's when I shared my plan for Joy for Haiti with my "Haitian family" and together we are fundraising to provide this transition home where everyone here can "Live in Joy". Isn't Joy a beautiful word? "A feeling of great pleasure and happiness." I LOVE that definition and I definitely believe true joy can only come from God.</p>
+                <p class="story-author">— Kodi Vicari<br>Founder</p>
+            </div>
+            <div class="story-images">
+                <div class="story-image"></div>
+                <div class="story-image"></div>
+                <div class="story-image"></div>
+                <div class="story-image"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo">
+                    <div class="logo-circle"></div>
+                    <div class="logo-text">
+                        <h1>JOY FOR HAITI</h1>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-address">
+                12842 Ari Lane<br>
+                Fishers, IN 46037
+            </div>
+
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="support.html">Support</a>
+                <a href="blog.html">Updates & Resources</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-note">
+                © 2026 Joy for Haiti. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            if (!nav.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
