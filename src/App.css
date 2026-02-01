@@ -1,0 +1,19 @@
+/* App-specific styles */
+main {
+  flex: 1;
+  padding-top: 80px;
+}
+
+/* Page transition */
+main > * {
+  animation: pageEnter 0.5s ease forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
