@@ -122,6 +122,35 @@
   height: 100%;
 }
 
+/* Empty State */
+.blog-empty {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.blog-empty p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-gray);
+  margin-bottom: 2rem;
+}
+
+.blog-empty a:not(.btn) {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-accent);
+  transition: opacity var(--transition-fast);
+}
+
+.blog-empty a:not(.btn):hover {
+  opacity: 0.8;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .blog-section {

@@ -17,11 +17,6 @@ function Footer() {
           </Link>
         </div>
 
-        <div className="footer-address">
-          <p>12842 Ari Lane</p>
-          <p>Fishers, IN 46037</p>
-        </div>
-
         <nav className="footer-nav">
           <Link to="/about">About</Link>
           <Link to="/support">Support</Link>

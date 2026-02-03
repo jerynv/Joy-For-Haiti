@@ -1,0 +1,9 @@
+# Joy for Haiti - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://joyforhaiti.org/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1

@@ -1,6 +1,21 @@
 import './About.css'
 
+function getAge(birthDate) {
+  const today = new Date()
+  const birth = new Date(birthDate)
+  let age = today.getFullYear() - birth.getFullYear()
+  const monthDiff = today.getMonth() - birth.getMonth()
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+    age--
+  }
+  return age
+}
+
 function About() {
+  const dawsonAge = getAge('2003-01-08')
+  const brayleeAge = getAge('2005-01-12')
+  const jerynAge = getAge('2007-01-25')
+  const laniaAge = getAge('2008-04-12')
   return (
     <div className="about">
       {/* Page Hero */}
@@ -104,7 +119,7 @@ function About() {
                   <strong>My name is Kodi Vicari</strong>, and I am a wife to my husband Andy, mother of 4 kiddos and 3 dogs, and I love serving and taking care of others and giving God ALL the glory!
                 </p>
                 <p>
-                  As you can see, we are a diverse family. Dawson (17) and Braylee (15) are our biological children and Jeryn (13) and LeNia (12) are adopted from Haiti. Andy and I were called with a clear plan from God 12-ish years ago to adopt his 2 children.
+                  As you can see, we are a diverse family. Dawson ({dawsonAge}) and Braylee ({brayleeAge}) are our biological children and Jeryn ({jerynAge}) and Lania ({laniaAge}) are adopted from Haiti. Andy and I were called with a clear plan from God nearly two decades ago to adopt his 2 children.
                 </p>
                 <p>
                   Never realizing that we would ever adopt, we didn't have a single resource planned. God not only worked out each and every detail. While in Haiti so many years ago and each time I have traveled since, God has whispered to me that we would be forever connected to this poor yet beautiful country.
@@ -113,7 +128,7 @@ function About() {
                   Now I'm not a patient person and God would be the first to know this. So impatiently and prayerfully waiting he finally revealed HIS plan. There is a grave need for a transition home especially for the teen population which I have come to realize is the "forgotten" population.
                 </p>
                 <p>
-                  You see, these teens have been dismissed prematurely from orphanages and there is no one willing or able to care for them and they still need to complete high school. Is it ironic that 3 out of 4 of my children are teens right now. I think not. What I do think is that I could never imagine Dawson, Braylee, or Jeryn on the streets in a very dangerous country trying to survive with no one and only having dreams of finishing high school.
+                  You see, these teens have been dismissed prematurely from orphanages and there is no one willing or able to care for them and they still need to complete high school. Is it ironic that all of my children are teens or older right now. I think not. What I do think is that I could never imagine any of my kids on the streets in a very dangerous country trying to survive with no one and only having dreams of finishing high school.
                 </p>
                 <p>
                   That's when I shared my plan for Joy for Haiti with my "Haitian family" and together we are fundraising to provide this transition home where everyone here can "Live in Joy". Isn't Joy a beautiful word? "A feeling of great pleasure and happiness." I LOVE that definition and I definitely believe true joy can only come from God.
@@ -130,7 +145,7 @@ function About() {
                   <img src="/images/family-portrait.jpg" alt="The Vicari Family" />
                 </div>
                 <div className="story-image">
-                  <img src="/images/adoption-day.jpg" alt="Adoption day - Andy and Kodi with Jeryn and LeNia" />
+                  <img src="/images/adoption-day.jpg" alt="Adoption day - Andy and Kodi with Jeryn and Lania" />
                 </div>
                 <div className="story-image">
                   <img src="/images/volunteers-with-baby.jpg" alt="Kodi and Braylee volunteering in Haiti" />
